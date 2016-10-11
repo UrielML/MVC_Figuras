@@ -7,7 +7,7 @@ package views;
 
 /**
  *
- * @author DRAGKOZ
+ * 
  */
 public class ViewMain extends javax.swing.JFrame {
 
@@ -27,7 +27,28 @@ public class ViewMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jmi_volumen = new javax.swing.JMenuItem();
+        jmi_Perimetro = new javax.swing.JMenuItem();
+        jmi_Area = new javax.swing.JMenuItem();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jMenu1.setText("Files");
+
+        jmi_volumen.setText("Volumen");
+        jMenu1.add(jmi_volumen);
+
+        jmi_Perimetro.setText("Perimetro");
+        jMenu1.add(jmi_Perimetro);
+
+        jmi_Area.setText("Area");
+        jMenu1.add(jmi_Area);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -37,7 +58,7 @@ public class ViewMain extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 279, Short.MAX_VALUE)
         );
 
         pack();
@@ -69,6 +90,9 @@ public class ViewMain extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(ViewMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -79,5 +103,10 @@ public class ViewMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    public javax.swing.JMenuItem jmi_Area;
+    public javax.swing.JMenuItem jmi_Perimetro;
+    public javax.swing.JMenuItem jmi_volumen;
     // End of variables declaration//GEN-END:variables
 }

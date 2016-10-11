@@ -1,36 +1,42 @@
+/*
+Implementacion del modelo Area
+ */
 package models;
 
+/**
+ *
+ * 
+ */
 public class ModelArea {
-    private double area = 0.0;
-    private double base = 0.0;
-    private double altura = 0.0;
-
-    /**
-     * @return the area
-     */
-    public double getArea() {
-        return area;
+    private double resultadoa;
+    private double altura;
+    private double radio;
+    
+    
+    public void cilindro(){
+        setResultadoa(((2*3.1416) * getRadio()) * (getAltura() + getRadio()));
+    }
+    public void cubo(){
+        double areaCara = getAltura()*getAltura();
+        setResultadoa(6*(areaCara*areaCara));
+    }
+    public void esfera(){
+        setResultadoa((4*3.1416) * (getRadio() * getRadio()));
+        
     }
 
     /**
-     * @param area the area to set
+     * @return the resultadoa
      */
-    public void setArea(double area) {
-        this.area = area;
+    public double getResultadoa() {
+        return resultadoa;
     }
 
     /**
-     * @return the base
+     * @param resultadoa the resultadoa to set
      */
-    public double getBase() {
-        return base;
-    }
-
-    /**
-     * @param base the base to set
-     */
-    public void setBase(double base) {
-        this.base = base;
+    public void setResultadoa(double resultadoa) {
+        this.resultadoa = resultadoa;
     }
 
     /**
@@ -46,16 +52,20 @@ public class ModelArea {
     public void setAltura(double altura) {
         this.altura = altura;
     }
-    
-    public void aCuadrado(){
-        area = base * base;
+
+    /**
+     * @return the radio
+     */
+    public double getRadio() {
+        return radio;
     }
-    
-    public void aRectangulo(){
-        area = base * altura;
+
+    /**
+     * @param radio the radio to set
+     */
+    public void setRadio(double radio) {
+        this.radio = radio;
     }
-    
-    public void aTriangulo(){
-        area = (base * altura)/2;
-    }
+
+  
 }

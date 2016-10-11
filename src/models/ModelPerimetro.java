@@ -1,70 +1,92 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package models;
 
 /**
  *
- * @author DRAGKOZ
+ *
  */
 public class ModelPerimetro {
-    private double perimetro = 0.0;
-    private double base = 0.0;
-    private double altura = 0.0;
-
+    private double ladoTriangulo=0;
+    private double baseTriangulo=0;
+    private double baseRectangulo=0;
+    private double alturaRectangulo=0;
+    private double ladoCuadrado=0;
+ 
     /**
-     * @return the perimetro
+     * @return the ladoTriangulo
      */
-    public double getPerimetro() {
-        return perimetro;
+    public double getLadoTriangulo() {
+        return ladoTriangulo;
     }
 
     /**
-     * @param perimetro the perimetro to set
+     * @param ladoTriangulo the ladoTriangulo to set
      */
-    public void setPerimetro(double perimetro) {
-        this.perimetro = perimetro;
+    public void setLadoTriangulo(double ladoTriangulo) {
+        this.ladoTriangulo = ladoTriangulo;
     }
 
     /**
-     * @return the base
+     * @return the baseTriangulo
      */
-    public double getBase() {
-        return base;
+    public double getBaseTriangulo() {
+        return baseTriangulo;
     }
 
     /**
-     * @param base the base to set
+     * @param baseTriangulo the baseTriangulo to set
      */
-    public void setBase(double base) {
-        this.base = base;
+    public void setBaseTriangulo(double baseTriangulo) {
+        this.baseTriangulo = baseTriangulo;
     }
 
     /**
-     * @return the altura
+     * @return the baseRectangulo
      */
-    public double getAltura() {
-        return altura;
+    public double getBaseRectangulo() {
+        return baseRectangulo;
     }
 
     /**
-     * @param altura the altura to set
+     * @param baseRectangulo the baseRectangulo to set
      */
-    public void setAltura(double altura) {
-        this.altura = altura;
+    public void setBaseRectangulo(double baseRectangulo) {
+        this.baseRectangulo = baseRectangulo;
     }
+
+    /**
+     * @return the alturaRectangulo
+     */
+    public double getAlturaRectangulo() {
+        return alturaRectangulo;
+    }
+
+    /**
+     * @param alturaRectangulo the alturaRectangulo to set
+     */
+    public void setAlturaRectangulo(double alturaRectangulo) {
+        this.alturaRectangulo = alturaRectangulo;
+    }
+
+    /**
+     * @return the ladoCuadrado
+     */
+    public double getLadoCuadrado() {
+        return ladoCuadrado;
+    }
+
+    /**
+     * @param ladoCuadrado the ladoCuadrado to set
+     */
+    public void setLadoCuadrado(double ladoCuadrado) {
+        this.ladoCuadrado = ladoCuadrado;
+    }
+
+
     
-    public void pCuadrado (){
-        perimetro = base * 4;
-    }
     
-    public void pRectangulo (){
-        perimetro = 2*(base + altura);
-    }
     
-    public void pTrianguloEquilatero (){
-        perimetro = 3*base;
-    }
+    
+    
+    
 }

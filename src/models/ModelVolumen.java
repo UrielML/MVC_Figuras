@@ -1,85 +1,80 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ Implementacion del ModelVolumen
  */
 package models;
 
 /**
  *
- * @author DRAGKOZ
+ *
  */
 public class ModelVolumen {
-    private double volumen = 0.0;
-    private double largo = 0.0;
-    private double ancho = 0.0;
-    private double alto = 0.0;
-
-    /**
-     * @return the volumen
-     */
-    public double getVolumen() {
-        return volumen;
+    private double resultado;
+    private double areaBase;
+    private double altura;
+    private double radio;
+    
+    
+    public void cono(){
+        setResultado(((3.1416*(getRadio()*getRadio()))*getAltura())/3);
+    }
+    public void prisma(){
+        setResultado(getAreaBase()*getAltura());
+    }
+    public void esfera(){
+        setResultado((4/3)*(3.1416*getRadio()));
+        
     }
 
     /**
-     * @param volumen the volumen to set
+     * @param resultado the resultado to set
      */
-    public void setVolumen(double volumen) {
-        this.volumen = volumen;
+    public void setResultado(double resultado) {
+        this.resultado = resultado;
+    }
+    public double getResultado() {
+        return resultado;
     }
 
     /**
-     * @return the largo
+     * @return the areaBase
      */
-    public double getLargo() {
-        return largo;
+    public double getAreaBase() {
+        return areaBase;
     }
 
     /**
-     * @param largo the largo to set
+     * @param areaBase the areaBase to set
      */
-    public void setLargo(double largo) {
-        this.largo = largo;
+    public void setAreaBase(double areaBase) {
+        this.areaBase = areaBase;
     }
 
     /**
-     * @return the ancho
+     * @return the altura
      */
-    public double getAncho() {
-        return ancho;
+    public double getAltura() {
+        return altura;
     }
 
     /**
-     * @param ancho the acnho to set
+     * @param altura the altura to set
      */
-    public void setAncho(double ancho) {
-        this.ancho = ancho;
+    public void setAltura(double altura) {
+        this.altura = altura;
     }
 
     /**
-     * @return the alto
+     * @return the radio
      */
-    public double getAlto() {
-        return alto;
+    public double getRadio() {
+        return radio;
     }
 
     /**
-     * @param alto the alto to set
+     * @param radio the radio to set
      */
-    public void setAlto(double alto) {
-        this.alto = alto;
+    public void setRadio(double radio) {
+        this.radio = radio;
     }
     
-    public void vCubo(){
-        volumen = largo*largo*largo;
-    }
-    
-    public void pri_rectangulo(){
-        volumen = largo*ancho*alto;
-    }
-    
-    public void pri_triangulo(){
-        volumen = (((largo*alto)/2)*ancho);
-    }
 }
