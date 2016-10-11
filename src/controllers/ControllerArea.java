@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import views.ViewArea;
 import models.ModelArea;
-import ddhl.Conversiones;
+import dk97.Devuelve ;
 /**
  *
  * 
@@ -14,7 +14,7 @@ import ddhl.Conversiones;
 public class ControllerArea implements ActionListener{
     private final ViewArea viewArea;
     private final ModelArea modelArea;
-    Conversiones con = new Conversiones();
+Devuelve con = new Devuelve();
     public ControllerArea(ViewArea viewArea,ModelArea modelArea){
         this.viewArea = viewArea;
         this.modelArea = modelArea;
@@ -33,8 +33,8 @@ public class ControllerArea implements ActionListener{
                 this.viewArea.jtf_radio.setVisible(false);
             }
      if(e.getSource()==viewArea.jbtn_calcularA){
-           this.modelArea.setAltura(con.stringToDouble(this.viewArea.jtf_altura.getText()));
-           this.modelArea.setRadio(con.stringToDouble(this.viewArea.jtf_radio.getText()));
+           this.modelArea.setAltura(con.StringToDouble(this.viewArea.jtf_altura.getText()));
+           this.modelArea.setRadio(con.StringToDouble(this.viewArea.jtf_radio.getText()));
             if(viewArea.jcb_figuraA.getSelectedItem().equals("Cilindro")){
                 this.modelArea.cilindro();
                 this.viewArea.jtf_resultado.setText(""+this.modelArea.getResultadoa());
