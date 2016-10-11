@@ -6,6 +6,7 @@ import controllers.*;
 import javax.swing.JPanel;
 /**
  *
+ *  Hola
  */
 public class Main {
     private static ViewMain viewMain;
